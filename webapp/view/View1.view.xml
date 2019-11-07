@@ -1,0 +1,38 @@
+<mvc:View controllerName="fdata.Formatter.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table items="{/details}">
+							<columns>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text width="12em" text="Bill no."></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text width="12em" text="Bill Date"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text width="12em" text="Due Date"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text width="12em" text="Bill Status"></Text>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle">
+									<cells >
+										<Text text="{billNo}" wrapping="true"></Text>
+										<Text text="{path : 'billDt' , formatter : '.formatter.dateformat'}" wrapping="true"></Text>
+										<Text text="{path : 'dueDt' , formatter : '.formatter.dateformat'}" wrapping="true"></Text>
+										<Text text="{path : 'billPymt' , formatter : '.formatter.fullName'}" wrapping="true"></Text>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
